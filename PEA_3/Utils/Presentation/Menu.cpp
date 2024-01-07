@@ -8,6 +8,7 @@
 #include <fstream>
 #include "Menu.h"
 #include "../Reader/FileReader.h"
+#include "../../Algorithms/GeneticAlgorithmUtils/Population.h"
 
 
 void Menu::displayMenu() {
@@ -48,6 +49,10 @@ void Menu::displayAlgorithms(std::vector<std::vector<int>> graph) {
         std::cin >> gate;
         switch (gate) {
             case 1:
+                population = new Population(graph,10);
+                population->populate();
+                population->displayPopulation();
+//                population->sortThePopulation();
                 break;
             case 2:
                 break;

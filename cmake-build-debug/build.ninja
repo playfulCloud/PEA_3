@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/playfulCloud/CLionProjects/PEA_3/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/Jakub/CLionProjects/PEA_3/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target PEA_3
 
@@ -49,23 +49,35 @@ cmake_ninja_workdir = /home/playfulCloud/CLionProjects/PEA_3/cmake-build-debug/
 
 build cmake_object_order_depends_target_PEA_3: phony || CMakeFiles/PEA_3.dir
 
-build CMakeFiles/PEA_3.dir/PEA_3/main.cpp.o: CXX_COMPILER__PEA_3_unscanned_Debug /home/playfulCloud/CLionProjects/PEA_3/PEA_3/main.cpp || cmake_object_order_depends_target_PEA_3
-  DEP_FILE = CMakeFiles/PEA_3.dir/PEA_3/main.cpp.o.d
+build CMakeFiles/PEA_3.dir/PEA_3/main.cpp.obj: CXX_COMPILER__PEA_3_unscanned_Debug C$:/Users/Jakub/CLionProjects/PEA_3/PEA_3/main.cpp || cmake_object_order_depends_target_PEA_3
+  DEP_FILE = CMakeFiles\PEA_3.dir\PEA_3\main.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/PEA_3.dir
-  OBJECT_FILE_DIR = CMakeFiles/PEA_3.dir/PEA_3
+  OBJECT_DIR = CMakeFiles\PEA_3.dir
+  OBJECT_FILE_DIR = CMakeFiles\PEA_3.dir\PEA_3
 
-build CMakeFiles/PEA_3.dir/PEA_3/Utils/Reader/FileReader.cpp.o: CXX_COMPILER__PEA_3_unscanned_Debug /home/playfulCloud/CLionProjects/PEA_3/PEA_3/Utils/Reader/FileReader.cpp || cmake_object_order_depends_target_PEA_3
-  DEP_FILE = CMakeFiles/PEA_3.dir/PEA_3/Utils/Reader/FileReader.cpp.o.d
+build CMakeFiles/PEA_3.dir/PEA_3/Utils/Reader/FileReader.cpp.obj: CXX_COMPILER__PEA_3_unscanned_Debug C$:/Users/Jakub/CLionProjects/PEA_3/PEA_3/Utils/Reader/FileReader.cpp || cmake_object_order_depends_target_PEA_3
+  DEP_FILE = CMakeFiles\PEA_3.dir\PEA_3\Utils\Reader\FileReader.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/PEA_3.dir
-  OBJECT_FILE_DIR = CMakeFiles/PEA_3.dir/PEA_3/Utils/Reader
+  OBJECT_DIR = CMakeFiles\PEA_3.dir
+  OBJECT_FILE_DIR = CMakeFiles\PEA_3.dir\PEA_3\Utils\Reader
 
-build CMakeFiles/PEA_3.dir/PEA_3/Utils/Presentation/Menu.cpp.o: CXX_COMPILER__PEA_3_unscanned_Debug /home/playfulCloud/CLionProjects/PEA_3/PEA_3/Utils/Presentation/Menu.cpp || cmake_object_order_depends_target_PEA_3
-  DEP_FILE = CMakeFiles/PEA_3.dir/PEA_3/Utils/Presentation/Menu.cpp.o.d
+build CMakeFiles/PEA_3.dir/PEA_3/Utils/Presentation/Menu.cpp.obj: CXX_COMPILER__PEA_3_unscanned_Debug C$:/Users/Jakub/CLionProjects/PEA_3/PEA_3/Utils/Presentation/Menu.cpp || cmake_object_order_depends_target_PEA_3
+  DEP_FILE = CMakeFiles\PEA_3.dir\PEA_3\Utils\Presentation\Menu.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles/PEA_3.dir
-  OBJECT_FILE_DIR = CMakeFiles/PEA_3.dir/PEA_3/Utils/Presentation
+  OBJECT_DIR = CMakeFiles\PEA_3.dir
+  OBJECT_FILE_DIR = CMakeFiles\PEA_3.dir\PEA_3\Utils\Presentation
+
+build CMakeFiles/PEA_3.dir/PEA_3/Algorithms/GeneticAlgorithmUtils/Population.cpp.obj: CXX_COMPILER__PEA_3_unscanned_Debug C$:/Users/Jakub/CLionProjects/PEA_3/PEA_3/Algorithms/GeneticAlgorithmUtils/Population.cpp || cmake_object_order_depends_target_PEA_3
+  DEP_FILE = CMakeFiles\PEA_3.dir\PEA_3\Algorithms\GeneticAlgorithmUtils\Population.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\PEA_3.dir
+  OBJECT_FILE_DIR = CMakeFiles\PEA_3.dir\PEA_3\Algorithms\GeneticAlgorithmUtils
+
+build CMakeFiles/PEA_3.dir/PEA_3/Algorithms/GeneticAlgorithmUtils/Chromosome.cpp.obj: CXX_COMPILER__PEA_3_unscanned_Debug C$:/Users/Jakub/CLionProjects/PEA_3/PEA_3/Algorithms/GeneticAlgorithmUtils/Chromosome.cpp || cmake_object_order_depends_target_PEA_3
+  DEP_FILE = CMakeFiles\PEA_3.dir\PEA_3\Algorithms\GeneticAlgorithmUtils\Chromosome.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\PEA_3.dir
+  OBJECT_FILE_DIR = CMakeFiles\PEA_3.dir\PEA_3\Algorithms\GeneticAlgorithmUtils
 
 
 # =============================================================================
@@ -73,22 +85,24 @@ build CMakeFiles/PEA_3.dir/PEA_3/Utils/Presentation/Menu.cpp.o: CXX_COMPILER__PE
 
 
 #############################################
-# Link the executable PEA_3
+# Link the executable PEA_3.exe
 
-build PEA_3: CXX_EXECUTABLE_LINKER__PEA_3_Debug CMakeFiles/PEA_3.dir/PEA_3/main.cpp.o CMakeFiles/PEA_3.dir/PEA_3/Utils/Reader/FileReader.cpp.o CMakeFiles/PEA_3.dir/PEA_3/Utils/Presentation/Menu.cpp.o
+build PEA_3.exe: CXX_EXECUTABLE_LINKER__PEA_3_Debug CMakeFiles/PEA_3.dir/PEA_3/main.cpp.obj CMakeFiles/PEA_3.dir/PEA_3/Utils/Reader/FileReader.cpp.obj CMakeFiles/PEA_3.dir/PEA_3/Utils/Presentation/Menu.cpp.obj CMakeFiles/PEA_3.dir/PEA_3/Algorithms/GeneticAlgorithmUtils/Population.cpp.obj CMakeFiles/PEA_3.dir/PEA_3/Algorithms/GeneticAlgorithmUtils/Chromosome.cpp.obj
   FLAGS = -g
-  OBJECT_DIR = CMakeFiles/PEA_3.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = PEA_3
-  TARGET_PDB = PEA_3.dbg
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\PEA_3.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = PEA_3.exe
+  TARGET_IMPLIB = libPEA_3.dll.a
+  TARGET_PDB = PEA_3.exe.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/playfulCloud/CLionProjects/PEA_3/cmake-build-debug && /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cmd.exe /C "cd /D C:\Users\Jakub\CLionProjects\PEA_3\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -99,7 +113,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/playfulCloud/CLionProjects/PEA_3/cmake-build-debug && /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/playfulCloud/CLionProjects/PEA_3 -B/home/playfulCloud/CLionProjects/PEA_3/cmake-build-debug
+  COMMAND = cmd.exe /C "cd /D C:\Users\Jakub\CLionProjects\PEA_3\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\Jakub\CLionProjects\PEA_3 -BC:\Users\Jakub\CLionProjects\PEA_3\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -109,15 +123,17 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build PEA_3: phony PEA_3.exe
+
 # =============================================================================
 # Folder targets.
 
 # =============================================================================
 
 #############################################
-# Folder: /home/playfulCloud/CLionProjects/PEA_3/cmake-build-debug
+# Folder: C:/Users/Jakub/CLionProjects/PEA_3/cmake-build-debug
 
-build all: phony PEA_3
+build all: phony PEA_3.exe
 
 # =============================================================================
 # Built-in targets
@@ -126,14 +142,14 @@ build all: phony PEA_3
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/playfulCloud/CLionProjects/PEA_3/CMakeLists.txt /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.27.0/CMakeCCompiler.cmake CMakeFiles/3.27.0/CMakeCXXCompiler.cmake CMakeFiles/3.27.0/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/Jakub/CLionProjects/PEA_3/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/playfulCloud/CLionProjects/PEA_3/CMakeLists.txt /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-C.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU-CXX.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-GNU.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux-Initialize.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/Linux.cmake /home/playfulCloud/Downloads/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.27.0/CMakeCCompiler.cmake CMakeFiles/3.27.0/CMakeCXXCompiler.cmake CMakeFiles/3.27.0/CMakeSystem.cmake: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.27/Modules/Platform/WindowsPaths.cmake C$:/Users/Jakub/CLionProjects/PEA_3/CMakeLists.txt CMakeCache.txt CMakeFiles/3.27.8/CMakeCCompiler.cmake CMakeFiles/3.27.8/CMakeCXXCompiler.cmake CMakeFiles/3.27.8/CMakeRCCompiler.cmake CMakeFiles/3.27.8/CMakeSystem.cmake: phony
 
 
 #############################################

@@ -7,4 +7,9 @@ add_executable(PEA_3 PEA_3/main.cpp
         PEA_3/Utils/Reader/FileReader.cpp
         PEA_3/Utils/Reader/FileReader.h
         PEA_3/Utils/Presentation/Menu.cpp
-        PEA_3/Utils/Presentation/Menu.h)
+        PEA_3/Utils/Presentation/Menu.h
+        PEA_3/Algorithms/GeneticAlgorithmUtils/Population.cpp
+        PEA_3/Algorithms/GeneticAlgorithmUtils/Population.h
+        PEA_3/Algorithms/GeneticAlgorithmUtils/Population.h
+        PEA_3/Algorithms/GeneticAlgorithmUtils/Chromosome.cpp
+        PEA_3/Algorithms/GeneticAlgorithmUtils/Chromosome.h)

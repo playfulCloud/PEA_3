@@ -8,10 +8,13 @@
 
 #include <vector>
 #include "../Reader/FileReader.h"
+#include "../../Algorithms/GeneticAlgorithmUtils/Population.h"
+
 class Menu {
 public:
     void displayAlgorithms(std::vector<std::vector<int>> graph);
     FileReader *fileReader;
+    Population *population;
     std::vector<std::vector<int>> graph;
     void displayMenu();
 };
