@@ -11,20 +11,33 @@
 
 class Population {
 public:
-    Population(std::vector<std::vector<int>> cites, int sizeOfPopulation);
+    Population(std::vector<std::vector<int>> cites, int sizeOfPopulation, int crossOverType,int mutationType,int time,double crossOverChance,double mutationChance);
     std::vector<Chromosome> populate();
     std::vector<Chromosome> wholePopulation;
     std::vector<std::vector<int>> cites;
     int sizeOfPopulation;
-    Chromosome generateRandomPath();
     int calculatePathCost(std::vector<int> path, std::vector<std::vector<int>> matrix);
+    Chromosome generateRandomPath();
     void sortThePopulation();
     void displayPopulation();
-    std::vector<Chromosome> makeCrossOverForPopulation(double crossOverChance);
-    std::vector<Chromosome> makeMutationForPopulation(double mutationChance);
+    std::vector<Chromosome> makeCrossOverForPopulation();
+    std::vector<Chromosome> makeMutationForPopulation();
     bool checkPropForChromosome(double value);
     int generateRandomNumber(int min, int max);
-    void makeCrossOver(Chromosome best, Chromosome chooseToCrossing,int crossOverType);
+    int crossOverType;
+    int mutationType;
+    double crossOverChance;
+    double mutationChance;
+    int time;
+    void makeCrossOver(Chromosome best, Chromosome chooseToCrossing);
+    void makeMutation(Chromosome toMutate);
+    void makeSelection();
+
+    void geneticAlgorithm();
+
+    void displayBestChromosomePath();
+
+    void displayPathOfChromosome(Chromosome chromosome);
 };
 
 

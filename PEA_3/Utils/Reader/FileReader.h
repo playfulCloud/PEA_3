@@ -15,6 +15,8 @@ class FileReader {
 
 public:
     std::vector<std::vector<int>> readFromFile();
+
+    static void displayReadMatrix(std::vector<std::vector<int>> &adjacencyMatrix) ;
 };
 
 

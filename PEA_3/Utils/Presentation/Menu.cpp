@@ -39,22 +39,34 @@ void Menu::displayMenu() {
 void Menu::displayAlgorithms(std::vector<std::vector<int>> graph) {
     std::cout << "=========================== Algorithms menu ===========================" << std::endl;
     int gate = 0;
-    while (gate != 3) {
+    while (gate != 5) {
         std::cout << "Choose what do you want to do: " << std::endl;
-        std::cout << "1 - First mutation method" << std::endl;
-        std::cout << "2 - Second mutation method" << std::endl;
-        std::cout << "3 - First crossbreeding method" << std::endl;
-        std::cout << "4 - Second crossbreeding method" << std::endl;
+        std::cout << "1 - Genetic Algorithm - Crossover: Single-point / Mutation: Swap " << std::endl;
+        std::cout << "2 - Genetic Algorithm - Crossover: Single-point / Mutation: Scramble " << std::endl;
+        std::cout << "3 - Genetic Algorithm - Crossover: OX / Mutation: Swap " << std::endl;
+        std::cout << "4 - Genetic Algorithm - Crossover: OX / Mutation: Scramble " << std::endl;
         std::cout << "5 - Exit" << std::endl;
         std::cin >> gate;
         switch (gate) {
             case 1:
-                population = new Population(graph,10);
+                population = new Population(graph,10000,1,1,120,0.8,0.10);
                 population->populate();
-                population->displayPopulation();
-//                population->sortThePopulation();
+                population->geneticAlgorithm();
                 break;
             case 2:
+                population = new Population(graph,100,1,2,120,0.8,0.10);
+                population->populate();
+                population->geneticAlgorithm();
+                break;
+            case 3:
+                population = new Population(graph,10000,2,1,120,0.8,0.10);
+                population->populate();
+                population->geneticAlgorithm();
+                break;
+            case 4:
+                population = new Population(graph,10000,2,2,120,0.8,0.10);
+                population->populate();
+                population->geneticAlgorithm();
                 break;
         }
     }

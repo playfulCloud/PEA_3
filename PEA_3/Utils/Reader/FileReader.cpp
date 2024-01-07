@@ -17,14 +17,14 @@ std::vector<std::vector<int>> FileReader::readFromFile() {
     std::cin >> fileName;
     std::fstream file;
     std::filesystem::path projectPath = std::filesystem::current_path();
-    projectPath = projectPath.parent_path(); // Uzyskanie ścieżki do katalogu nadrzędnego
+    projectPath = projectPath.parent_path();
     std::string filePath = projectPath.string() + "\\PEA_3\\Data\\" + fileName;
     std::cout << filePath << std::endl;
     file.open(filePath, std::ios::in);
 
     if (!file.is_open()) {
         std::cout << "Nie można otworzyć pliku" << std::endl;
-        return {}; // Zwraca pustą macierz, jeśli plik nie może być otwarty
+        return {};
     }
 
     std::string line;
@@ -69,9 +69,11 @@ std::vector<std::vector<int>> FileReader::readFromFile() {
     }
 
     file.close();
+//    displayReadMatrix(adjacencyMatrix);
+    return adjacencyMatrix;
+}
 
-
-    // Opcjonalne: Drukowanie macierzy sąsiedztwa
+void FileReader::displayReadMatrix(std::vector<std::vector<int>> &adjacencyMatrix) {// Opcjonalne: Drukowanie macierzy sąsiedztwa
     for (const auto &row : adjacencyMatrix) {
         for (int weight : row) {
             std::cout << weight << "\t";
@@ -79,7 +81,6 @@ std::vector<std::vector<int>> FileReader::readFromFile() {
         std::cout << std::endl;
     }
     std::cout << "File has been read" << std::endl;
-    return adjacencyMatrix;
 }
 
 
