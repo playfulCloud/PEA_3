@@ -45,26 +45,32 @@ void Menu::displayAlgorithms(std::vector<std::vector<int>> graph) {
         std::cout << "2 - Genetic Algorithm - Crossover: Single-point / Mutation: Scramble " << std::endl;
         std::cout << "3 - Genetic Algorithm - Crossover: OX / Mutation: Swap " << std::endl;
         std::cout << "4 - Genetic Algorithm - Crossover: OX / Mutation: Scramble " << std::endl;
-        std::cout << "5 - Exit" << std::endl;
+        std::cout << "5 - Choose by yourself with all parameters " << std::endl;
+        std::cout << "6 - Exit" << std::endl;
         std::cin >> gate;
         switch (gate) {
             case 1:
-                population = new Population(graph,10000,1,1,120,0.8,0.10);
+                population = new Population(graph,10000,1,1,120,0.8,0.01,false,1,200);
                 population->populate();
                 population->geneticAlgorithm();
                 break;
             case 2:
-                population = new Population(graph,100,1,2,120,0.8,0.10);
+                population = new Population(graph,1000,1,2,120,0.8,0.01,false,1,200);
                 population->populate();
                 population->geneticAlgorithm();
                 break;
             case 3:
-                population = new Population(graph,10000,2,1,120,0.8,0.10);
+                population = new Population(graph,5000,2,1,120,0.8,0.01,false,1,200);
                 population->populate();
                 population->geneticAlgorithm();
                 break;
             case 4:
-                population = new Population(graph,10000,2,2,120,0.8,0.10);
+                population = new Population(graph,1000,2,2,120,0.8,0.01,false,1,200);
+                population->populate();
+                population->geneticAlgorithm();
+                break;
+            case 5:
+                population = new Population(graph,1000,2,2,120,0.8,0.01,true,1,200);
                 population->populate();
                 population->geneticAlgorithm();
                 break;

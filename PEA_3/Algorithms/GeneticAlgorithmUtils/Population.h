@@ -8,10 +8,11 @@
 
 #include <vector>
 #include "Chromosome.h"
+#include <chrono>
 
 class Population {
 public:
-    Population(std::vector<std::vector<int>> cites, int sizeOfPopulation, int crossOverType,int mutationType,int time,double crossOverChance,double mutationChance);
+    Population(std::vector<std::vector<int>> cites, int sizeOfPopulation, int crossOverType,int mutationType,int time,double crossOverChance,double mutationChance,bool presentation,int condition,int iterations);
     std::vector<Chromosome> populate();
     std::vector<Chromosome> wholePopulation;
     std::vector<std::vector<int>> cites;
@@ -38,6 +39,24 @@ public:
     void displayBestChromosomePath();
 
     void displayPathOfChromosome(Chromosome chromosome);
+
+    void checkOXcorrect(Chromosome &best, Chromosome &chooseToCrossing, int lowerBound, int upperBound,
+                        Chromosome &chooseToBestChromosome, Chromosome &bestToChooseChromosome) const;
+
+    std::vector<int> &
+    getChild(const Chromosome &best, const Chromosome &chooseToCrossing, std::vector<int> &firstPart, int size,
+             int lowerBound, int upperBound, int space) const;
+
+    void inputForPresentation(const std::vector<std::vector<int>> &cites);
+
+    int condition;
+    int iterationsWithoutChange;
+    int iterationDuringGeneration = 0;
+
+    bool
+    conditionOfStop(std::chrono::high_resolution_clock::time_point startTime, int generation,
+                    int previousBest,
+                    int actualBest);
 };
 
 
