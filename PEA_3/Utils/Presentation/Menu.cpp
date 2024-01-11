@@ -30,6 +30,130 @@ void Menu::displayMenu() {
                 displayAlgorithms(graph);
                 break;
             case 3:
+                graph = fileReader->readFromFile2("ftv47.atsp");
+
+                writeTittleToFile("times.txt",graph,47,1,1,180,0.8,0.01);
+                doTests(graph,47,1,1,180,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,47,1,2,180,0.8,0.01);
+                doTests(graph,47,1,2,180,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,47,2,1,180,0.8,0.01);
+                doTests(graph,47,2,1,180,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,47,2,2,180,0.8,0.01);
+                doTests(graph,47,2,2,180,0.8,0.01);
+//
+
+                writeTittleToFile("times.txt",graph,500,1,1,180,0.8,0.01);
+                doTests(graph,500,1,1,180,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,500,1,2,180,0.8,0.01);
+                doTests(graph,500,1,2,180,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,500,2,1,180,0.8,0.01);
+                doTests(graph,500,2,1,180,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,500,2,2,180,0.8,0.01);
+                doTests(graph,500,2,2,180,0.8,0.01);
+
+
+                writeTittleToFile("times.txt",graph,2000,1,1,180,0.8,0.01);
+                doTests(graph,2000,1,1,180,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,2000,1,2,180,0.8,0.01);
+                doTests(graph,2000,1,2,180,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,2000,2,1,180,0.8,0.01);
+                doTests(graph,2000,2,1,180,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,2000,2,2,180,0.8,0.01);
+                doTests(graph,2000,2,2,180,0.8,0.01);
+
+
+
+                graph = fileReader->readFromFile2("ftv170.atsp");
+
+                writeTittleToFile("times.txt",graph,47,1,1,300,0.8,0.01);
+                doTests(graph,47,1,1,300,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,47,1,2,300,0.8,0.01);
+                doTests(graph,47,1,2,300,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,47,2,1,300,0.8,0.01);
+                doTests(graph,47,2,1,300,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,47,2,2,300,0.8,0.01);
+                doTests(graph,47,2,2,300,0.8,0.01);
+//
+
+                writeTittleToFile("times.txt",graph,500,1,1,300,0.8,0.01);
+                doTests(graph,500,1,1,300,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,500,1,2,300,0.8,0.01);
+                doTests(graph,500,1,2,300,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,500,2,1,300,0.8,0.01);
+                doTests(graph,500,2,1,300,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,500,2,2,300,0.8,0.01);
+                doTests(graph,500,2,2,300,0.8,0.01);
+
+
+                writeTittleToFile("times.txt",graph,2000,1,1,300,0.8,0.01);
+                doTests(graph,2000,1,1,300,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,2000,1,2,300,0.8,0.01);
+                doTests(graph,2000,1,2,300,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,2000,2,1,300,0.8,0.01);
+                doTests(graph,2000,2,1,300,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,2000,2,2,300,0.8,0.01);
+                doTests(graph,2000,2,2,300,0.8,0.01);
+
+                graph = fileReader->readFromFile2("rbg403.atsp");
+
+                writeTittleToFile("times.txt",graph,47,1,1,420,0.8,0.01);
+                doTests(graph,47,1,1,420,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,47,1,2,420,0.8,0.01);
+                doTests(graph,47,1,2,420,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,47,2,1,420,0.8,0.01);
+                doTests(graph,47,2,1,420,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,47,2,2,420,0.8,0.01);
+                doTests(graph,47,2,2,420,0.8,0.01);
+//
+
+                writeTittleToFile("times.txt",graph,500,1,1,420,0.8,0.01);
+                doTests(graph,500,1,1,420,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,500,1,2,420,0.8,0.01);
+                doTests(graph,500,1,2,420,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,500,2,1,420,0.8,0.01);
+                doTests(graph,500,2,1,420,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,500,2,2,420,0.8,0.01);
+                doTests(graph,500,2,2,420,0.8,0.01);
+
+
+                writeTittleToFile("times.txt",graph,2000,1,1,420,0.8,0.01);
+                doTests(graph,2000,1,1,420,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,2000,1,2,420,0.8,0.01);
+                doTests(graph,2000,1,2,420,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,2000,2,1,420,0.8,0.01);
+                doTests(graph,2000,2,1,420,0.8,0.01);
+
+                writeTittleToFile("times.txt",graph,2000,2,2,420,0.8,0.01);
+                doTests(graph,2000,2,2,420,0.8,0.01);
+
+
+
                 break;
         }
     }
@@ -55,12 +179,12 @@ void Menu::displayAlgorithms(std::vector<std::vector<int>> graph) {
                 population->geneticAlgorithm();
                 break;
             case 2:
-                population = new Population(graph,1000,1,2,120,0.8,0.01,false,1,200);
+                population = new Population(graph,1000,1,2,10,0.8,0.01,false,2,200);
                 population->populate();
                 population->geneticAlgorithm();
                 break;
             case 3:
-                population = new Population(graph,5000,2,1,120,0.8,0.01,false,1,200);
+                population = new Population(graph,2000,2,1,120,0.8,0.01,false,1,200);
                 population->populate();
                 population->geneticAlgorithm();
                 break;
@@ -82,24 +206,41 @@ void Menu::displayAlgorithms(std::vector<std::vector<int>> graph) {
 
 
 
-//void Menu::doAllGeometricTests(std::vector<std::vector<int>> graph,std::string fileToWrite, int type, int timeLimit) {
-//    std::filesystem::path projectPath = std::filesystem::current_path();
-//    projectPath = projectPath.parent_path(); // Uzyskanie ścieżki do katalogu nadrzędnego
-//    std::string filePath = projectPath.string() + "\\PEA_2\\data\\" + fileToWrite;
-//    std::cout << filePath;
-//    std::ofstream fileStream(filePath);
-//
-//    for (int i = 0; i < 10; i++) {
-//        if (fileStream.is_open()) {
-//            simulatedAnnealing = new SimulatedAnnealing();
-//            std::string answer = simulatedAnnealing->simulatedAnnealingForTesting(graph,80,0.99,1000 ,type,timeLimit);
-//            fileStream << answer + "\n";
-//            std::cout << "skonczony" << std::endl;
-//            delete simulatedAnnealing;
-//        } else {
-//            std::cerr << "Error opening file: " << fileToWrite << std::endl;
-//        }
-//    }
-//}
+void Menu::doTests(std::vector<std::vector<int>> cites, int sizeOfPopulation, int crossOverType,int mutationType,int time,double crossOverChance,double mutationChance) {
+    for (int i = 0; i < 10; i++) {
+        population = new Population(cites,sizeOfPopulation,crossOverType,mutationType,time,crossOverChance,mutationChance,false,2,200);
+        population->populate();
+        population->geneticAlgorithm();
+        delete population;
+    }
+}
+
+void Menu::writeTittleToFile(std::string filename,std::vector<std::vector<int>> cites, int sizeOfPopulation, int crossOverType,int mutationType,int time,double crossOverChance,double mutationChance) {
+    std::filesystem::path projectPath = std::filesystem::current_path();
+    projectPath = projectPath.parent_path(); // Uzyskanie ścieżki do katalogu nadrzędnego
+    std::string filePath = projectPath.string() + "\\PEA_3\\Data\\" + filename;
+    std::ofstream fileStream(filePath, std::ios::app); // Open in append mode
+    std::string mutation;
+    std::string crossover;
+    switch (mutationType) {
+        case 1:
+            mutation = "SWAP";
+            break;
+        case 2:
+            mutation = "SCRUMBLE";
+            break;
+    }
+    switch (crossOverType) {
+        case 1:
+            crossover = "SINGLE-POINT";
+            break;
+        case 2:
+            crossover = "OX";
+            break;
+    }
+    fileStream << "############## Population: " << sizeOfPopulation <<" with number of cities "<< cites[0].size() <<" ############ Crossover: " << crossover << " with chance: " << crossOverChance << "Mutation: "
+               << mutation << " with chance: " << mutationChance << " ############ \n";
+
+}
 
 

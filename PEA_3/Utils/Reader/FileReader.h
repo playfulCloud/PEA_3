@@ -11,12 +11,12 @@
 
 class FileReader {
 
-    std::vector<std::vector<int>> readFromFile2(std::__cxx11::basic_string<char> fileName);
-
 public:
     std::vector<std::vector<int>> readFromFile();
 
     static void displayReadMatrix(std::vector<std::vector<int>> &adjacencyMatrix) ;
+
+    std::vector<std::vector<int>> readFromFile2(std::__cxx11::basic_string<char> fileName);
 };
 
 

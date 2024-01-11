@@ -17,6 +17,15 @@ public:
     Population *population;
     std::vector<std::vector<int>> graph;
     void displayMenu();
+
+    void
+    doTests(std::vector<std::vector<int>> cites, int sizeOfPopulation, int crossOverType, int mutationType, int time,
+            double crossOverChance, double mutationChance);
+
+    void
+    writeTittleToFile(std::string filename, std::vector<std::vector<int>> cites, int sizeOfPopulation,
+                      int crossOverType,
+                      int mutationType, int time, double crossOverChance, double mutationChance);
 };
 
 

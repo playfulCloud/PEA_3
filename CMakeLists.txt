@@ -12,4 +12,7 @@ add_executable(PEA_3 PEA_3/main.cpp
         PEA_3/Algorithms/GeneticAlgorithmUtils/Population.h
         PEA_3/Algorithms/GeneticAlgorithmUtils/Population.h
         PEA_3/Algorithms/GeneticAlgorithmUtils/Chromosome.cpp
-        PEA_3/Algorithms/GeneticAlgorithmUtils/Chromosome.h)
+        PEA_3/Algorithms/GeneticAlgorithmUtils/Chromosome.h
+        PEA_3/Utils/Answer.cpp
+        PEA_3/Utils/Answer.h
+        PEA_3/Utils/Answer.h)

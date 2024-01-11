@@ -6,10 +6,14 @@
 #include <algorithm>
 #include <iostream>
 #include <chrono>
+#include <filesystem>
+#include <fstream>
 #include "Population.h"
+#include "../../Utils/Answer.h"
 
 Population::Population(std::vector<std::vector<int>> cites, int sizeOfPopulation, int crossOverType, int mutationType,
-                       int time, double crossOverChance, double mutationChance, bool presentation, int condition,int iterations) {
+                       int time, double crossOverChance, double mutationChance, bool presentation, int condition,
+                       int iterations) {
     if (presentation) {
         inputForPresentation(cites);
     } else {
@@ -34,18 +38,17 @@ void Population::inputForPresentation(const std::vector<std::vector<int>> &cites
     int inputCondition;
     std::cin >> inputCondition;
     this->condition = inputCondition;
-    if(inputCondition == 1){
+    if (inputCondition == 1) {
         std::cout << "Please enter the number of iterations without change " << std::endl;
         int iterations;
         std::cin >> iterations;
         this->iterationsWithoutChange = iterations;
-    }else{
+    } else {
         std::cout << "Please enter the time limit in s" << std::endl;
         int timeLimit;
         std::cin >> timeLimit;
         time = timeLimit;
     }
-
 
 
     Population::cites = cites;
@@ -346,7 +349,7 @@ void Population::makeMutation(Chromosome toMutate) {
 
 void Population::makeSelection() {
     sortThePopulation();
-    displayBestChromosomePath();
+//    displayBestChromosomePath();
     int length = this->wholePopulation.size();
     if (length > sizeOfPopulation) {
         while (wholePopulation.size() != sizeOfPopulation) {
@@ -356,40 +359,151 @@ void Population::makeSelection() {
     }
 }
 
-bool Population::conditionOfStop(std::chrono::high_resolution_clock::time_point startTime,int generation, int previousBest,int actualBest){
-    if(condition == 1){
+bool
+Population::conditionOfStop(std::chrono::high_resolution_clock::time_point startTime, int generation, int previousBest,
+                            int actualBest) {
+    if (condition == 1) {
 //        std::cout << "Previous: " << previousBest << "Actual: " << actualBest << std::endl;
 //        std::cout << "Iteration without change: " << iterationDuringGeneration << std::endl;
-        if(previousBest == actualBest){
+        if (previousBest == actualBest) {
             iterationDuringGeneration++;
-            if(iterationDuringGeneration == iterationsWithoutChange){
+            if (iterationDuringGeneration == iterationsWithoutChange) {
                 return false;
-            }else{
+            } else {
                 return true;
             }
-        }else{
+        } else {
             iterationDuringGeneration = 0;
             return true;
         }
 
-    }else{
-       return  std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - startTime).count() < this->time*1000;
+    } else {
+        return std::chrono::duration_cast<std::chrono::milliseconds>(
+                std::chrono::high_resolution_clock::now() - startTime).count() < this->time * 1000;
     }
 
 }
+void Population::writeAnswerToFile(std::string filename){
+    std::filesystem::path projectPath = std::filesystem::current_path();
+    projectPath = projectPath.parent_path(); // Uzyskanie ścieżki do katalogu nadrzędnego
+    std::string filePath = projectPath.string() + "\\PEA_3\\Data\\" + filename;
+    std::ofstream fileStream(filePath, std::ios::app); // Open in append mode
+
+    fileStream << this->answer->pathValue << ";" << this->answer->time << "\n";
+}
+
+void Population::writePathAndValueToFile(std::string filename){
+    std::filesystem::path projectPath = std::filesystem::current_path();
+    projectPath = projectPath.parent_path(); // Uzyskanie ścieżki do katalogu nadrzędnego
+    std::string filePath = projectPath.string() + "\\PEA_3\\Data\\" + filename;
+    std::ofstream fileStream(filePath, std::ios::app); // Open in append mode
+
+    fileStream <<  "Path value: " << wholePopulation[0].pathValue << " with path: ";
+    for(int i = 0; i < wholePopulation[0].path.size(); i++){
+        fileStream << wholePopulation[0].path[i] << " ";
+    }
+    fileStream << "\n";
+}
+
+
+
+void Population::writeTimeAndBestPathTofile(std::string filename, Chromosome best,
+                                            std::chrono::high_resolution_clock::time_point startTime) {
+
+    updateAnswer(best, startTime);
+
+    std::filesystem::path projectPath = std::filesystem::current_path();
+    projectPath = projectPath.parent_path(); // Uzyskanie ścieżki do katalogu nadrzędnego
+    std::string filePath = projectPath.string() + "\\PEA_3\\Data\\" + filename;
+    std::ofstream fileStream(filePath, std::ios::app); // Open in append mode
+
+    fileStream << best.pathValue << ";";
+    fileStream << std::chrono::duration_cast<std::chrono::milliseconds>(
+            std::chrono::high_resolution_clock::now() - startTime).count();
+    fileStream << "\n";
+}
+
+void Population::updateAnswer(const Chromosome &best,std::chrono::high_resolution_clock::time_point startTime) {
+    if(answer->time != std::chrono::duration_cast<std::chrono::milliseconds>(
+                std::chrono::high_resolution_clock::now() - startTime).count() && answer->pathValue != best.pathValue){
+        answer->time = std::chrono::duration_cast<std::chrono::milliseconds>(
+                std::chrono::high_resolution_clock::now() - startTime).count();
+        answer->pathValue = best.pathValue;
+    }
+}
+
+void Population::writeTittleToFile(std::string filename) {
+    std::filesystem::path projectPath = std::filesystem::current_path();
+    projectPath = projectPath.parent_path(); // Uzyskanie ścieżki do katalogu nadrzędnego
+    std::string filePath = projectPath.string() + "\\PEA_3\\Data\\" + filename;
+    std::ofstream fileStream(filePath, std::ios::app); // Open in append mode
+    std::string mutation;
+    std::string crossover;
+    switch (mutationType) {
+        case 1:
+            mutation = "SWAP";
+            break;
+        case 2:
+            mutation = "SCRUMBLE";
+            break;
+    }
+    switch (crossOverType) {
+        case 1:
+            crossover = "SINGLE-POINT";
+            break;
+        case 2:
+            crossover = "OX";
+            break;
+    }
+    fileStream << "############## Population: " << sizeOfPopulation <<" with number of cities "<< cites[0].size() <<" ############ Crossover: " << crossover << " with chance: " << crossOverChance << " Mutation: "
+               << mutation << " with chance: " << mutationChance << " ############ \n";
+
+}
+
+void Population::writeEndingToFile(std::string filename) {
+    std::filesystem::path projectPath = std::filesystem::current_path();
+    projectPath = projectPath.parent_path(); // Uzyskanie ścieżki do katalogu nadrzędnego
+    std::string filePath = projectPath.string() + "\\PEA_3\\Data\\" + filename;
+    std::ofstream fileStream(filePath, std::ios::app); // Open in append mode
+    std::string mutation;
+    std::string crossover;
+    fileStream << "####################################################### \n";
+}
+
 
 void Population::geneticAlgorithm() {
     populate();
+    answer = new Answer();
+    answer->pathValue = 0;
+    answer->time = 69;
     auto startTime = std::chrono::high_resolution_clock::now();
+    writeTimeAndBestPathTofile("pathInTime.txt", wholePopulation[0], startTime);
+
+    auto lastSaveTime = std::chrono::high_resolution_clock::now();
+    const long long saveInterval = time*100/24;
+
     int generation = 0;
-    int actualBest = wholePopulation[0].pathValue;
     int previousBest = wholePopulation[0].pathValue;
-    while (conditionOfStop(startTime,generation,previousBest,wholePopulation[0].pathValue)) {
+    writeTittleToFile("pathInTime.txt");
+
+    while (conditionOfStop(startTime, generation, previousBest, wholePopulation[0].pathValue)) {
+
+        auto currentTime2 = std::chrono::high_resolution_clock::now();
+        auto timeSinceLastSave = std::chrono::duration_cast<std::chrono::milliseconds>(currentTime2 - lastSaveTime).count();
+
+        if (timeSinceLastSave >= saveInterval) {
+            writeTimeAndBestPathTofile("pathInTime.txt", wholePopulation[0], startTime);
+            lastSaveTime = currentTime2;
+        }
+
         previousBest = wholePopulation[0].pathValue;
+        updateAnswer(wholePopulation[0],startTime);
         makeSelection();
         makeCrossOverForPopulation();
         makeMutationForPopulation();
     }
+    writeAnswerToFile("times.txt");
+    writePathAndValueToFile("allPaths.txt");
     wholePopulation[0].displayChromosome();
 }
 

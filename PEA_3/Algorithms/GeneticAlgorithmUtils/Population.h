@@ -8,6 +8,7 @@
 
 #include <vector>
 #include "Chromosome.h"
+#include "../../Utils/Answer.h"
 #include <chrono>
 
 class Population {
@@ -52,11 +53,25 @@ public:
     int condition;
     int iterationsWithoutChange;
     int iterationDuringGeneration = 0;
+    int saveInterval;
+    std::chrono::high_resolution_clock::time_point lastTimeSave;
 
     bool
     conditionOfStop(std::chrono::high_resolution_clock::time_point startTime, int generation,
                     int previousBest,
                     int actualBest);
+
+    Answer *answer;
+    void writeTimeAndBestPathTofile(std::string filename, Chromosome best, std::chrono::high_resolution_clock::time_point startTime);
+
+    void writeTittleToFile(std::string filename);
+
+    void writeEndingToFile(std::string filename);
+    void writeAnswerToFile(std::string filename);
+
+    void writePathAndValueToFile(std::string filename);
+
+    void updateAnswer(const Chromosome &best, std::chrono::high_resolution_clock::time_point startTime);
 };
 
 

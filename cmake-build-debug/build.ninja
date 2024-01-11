@@ -79,6 +79,12 @@ build CMakeFiles/PEA_3.dir/PEA_3/Algorithms/GeneticAlgorithmUtils/Chromosome.cpp
   OBJECT_DIR = CMakeFiles\PEA_3.dir
   OBJECT_FILE_DIR = CMakeFiles\PEA_3.dir\PEA_3\Algorithms\GeneticAlgorithmUtils
 
+build CMakeFiles/PEA_3.dir/PEA_3/Utils/Answer.cpp.obj: CXX_COMPILER__PEA_3_unscanned_Debug C$:/Users/Jakub/CLionProjects/PEA_3/PEA_3/Utils/Answer.cpp || cmake_object_order_depends_target_PEA_3
+  DEP_FILE = CMakeFiles\PEA_3.dir\PEA_3\Utils\Answer.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\PEA_3.dir
+  OBJECT_FILE_DIR = CMakeFiles\PEA_3.dir\PEA_3\Utils
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target PEA_3
@@ -87,7 +93,7 @@ build CMakeFiles/PEA_3.dir/PEA_3/Algorithms/GeneticAlgorithmUtils/Chromosome.cpp
 #############################################
 # Link the executable PEA_3.exe
 
-build PEA_3.exe: CXX_EXECUTABLE_LINKER__PEA_3_Debug CMakeFiles/PEA_3.dir/PEA_3/main.cpp.obj CMakeFiles/PEA_3.dir/PEA_3/Utils/Reader/FileReader.cpp.obj CMakeFiles/PEA_3.dir/PEA_3/Utils/Presentation/Menu.cpp.obj CMakeFiles/PEA_3.dir/PEA_3/Algorithms/GeneticAlgorithmUtils/Population.cpp.obj CMakeFiles/PEA_3.dir/PEA_3/Algorithms/GeneticAlgorithmUtils/Chromosome.cpp.obj
+build PEA_3.exe: CXX_EXECUTABLE_LINKER__PEA_3_Debug CMakeFiles/PEA_3.dir/PEA_3/main.cpp.obj CMakeFiles/PEA_3.dir/PEA_3/Utils/Reader/FileReader.cpp.obj CMakeFiles/PEA_3.dir/PEA_3/Utils/Presentation/Menu.cpp.obj CMakeFiles/PEA_3.dir/PEA_3/Algorithms/GeneticAlgorithmUtils/Population.cpp.obj CMakeFiles/PEA_3.dir/PEA_3/Algorithms/GeneticAlgorithmUtils/Chromosome.cpp.obj CMakeFiles/PEA_3.dir/PEA_3/Utils/Answer.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\PEA_3.dir

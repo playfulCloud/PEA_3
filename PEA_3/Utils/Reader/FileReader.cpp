@@ -88,7 +88,7 @@ std::vector<std::vector<int>> FileReader::readFromFile2(std::string fileName) {
     std::fstream file;
     std::filesystem::path projectPath = std::filesystem::current_path();
     projectPath = projectPath.parent_path(); // Uzyskanie ścieżki do katalogu nadrzędnego
-    std::string filePath = projectPath.string() + "\\PEA_2\\data\\" + fileName;
+    std::string filePath = projectPath.string() + "\\PEA_3\\Data\\" + fileName;
     std::cout << filePath << std::endl;
     file.open(filePath, std::ios::in);
 
